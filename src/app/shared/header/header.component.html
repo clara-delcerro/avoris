@@ -1,1 +1,60 @@
-<p>header works!</p>
+<header class="header">
+  <div class="header__container">
+
+    <!-- logo -->
+    <div class="header__logo">
+      <img src="../../../assets/img/waveless-logo.svg" alt="Waveless" />
+    </div>
+    <!-- end of logo -->
+
+    <!-- menu button -->
+    <button
+      class="header__menu-btn"
+      type="button"
+      aria-label="abrir menú"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-controls="main-menu"
+      (click)="toggleMenu()"
+    >
+      <span class="header__menu-icon"></span>
+      <span class="header__menu-icon"></span>
+      <span class="header__menu-icon"></span>
+    </button>
+    <!-- end of menu button -->
+
+  </div>
+
+  <!-- navigation -->
+  <nav
+    id="main-menu"
+    class="header__nav"
+    [class.header__nav--open]="isMenuOpen"
+    [attr.aria-hidden]="!isMenuOpen"
+  >
+    <button
+      class="header__close"
+      type="button"
+      aria-label="cerrar menú"
+      (click)="toggleMenu()"
+    >
+      ✕
+    </button>
+
+    <ul class="header__list">
+      <li><a href="#" class="header__link">Aventura</a></li>
+      <li><a href="#" class="header__link">Destinos</a></li>
+      <li><a href="#" class="header__link">Alojamiento</a></li>
+      <li><a href="#" class="header__link">Sobre nosotros</a></li>
+      <li><a href="#" class="header__button">Reserva</a></li>
+    </ul>
+  </nav>
+  <!-- end of navigation -->
+
+  <!-- overlay -->
+  <div
+    class="header__overlay"
+    [class.header__overlay--show]="isMenuOpen"
+    (click)="toggleMenu()"
+  ></div>
+  <!-- end of overlay -->
+</header>
