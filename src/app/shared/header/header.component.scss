@@ -37,12 +37,11 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 75%;
-    max-width: 320px;
+    width: 100%;
     height: 100vh;
-    background-color: $white-color;
+    background-color: $secondary-color-bg;
     box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
-    padding: $sp-m $sp-l;
+    padding: $sp-ml;
     transition: right 0.35s ease;
     display: flex;
     flex-direction: column;
@@ -53,10 +52,12 @@
 
     .header__close {
       position:absolute;
+      top: $sp-sm;
+      right: $sp-m;
       background: none;
       border: none;
       align-self: flex-end;
-      font-size: 24px;
+      font-size: $sp-ml;
       cursor: pointer;
       margin: 0;
       padding: $sp-xs;
@@ -65,7 +66,7 @@
     .header__list {
       list-style: none;
       padding: 0;
-      margin: $sp-l 0 0 0;
+      margin: 0;
       display: flex;
       flex-direction: column;
       gap: $sp-l;
@@ -73,7 +74,7 @@
 
     .header__link {
       color: $text-dark;
-      font-size: 16px;
+      font-size: $sp-m;
       text-decoration: none;
       font-weight: 500;
       transition: 0.25s ease;
