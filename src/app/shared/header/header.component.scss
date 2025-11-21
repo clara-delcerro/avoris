@@ -52,6 +52,7 @@
     }
 
     .header__close {
+      position:absolute;
       background: none;
       border: none;
       align-self: flex-end;
@@ -91,20 +92,6 @@
       font-weight: 600;
       text-align: center;
       margin-top: $sp-l;
-    }
-  }
-
-  &__overlay {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease;
-
-    &--show {
-      opacity: 1;
-      visibility: visible;
     }
   }
 }
