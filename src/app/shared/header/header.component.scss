@@ -2,7 +2,7 @@
 @import '../../../styles/mixins';
 
 .header {
-  background-color: $white-color;
+  background-color: $white;
   padding: $sp-m 0;
 
   &__container {
@@ -27,7 +27,7 @@
     .header__menu-icon {
       width: 22px;
       height: 2px;
-      background-color: $text-dark;
+      background-color: $primary-700;
       border-radius: 2px;
       display: block;
     }
@@ -40,7 +40,7 @@
     width: 75%;
     max-width: 320px;
     height: 100vh;
-    background-color: $white-color;
+    background-color: $white;
     box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
     padding: $sp-m $sp-l;
     transition: right 0.35s ease;
@@ -72,20 +72,20 @@
     }
 
     .header__link {
-      color: $text-dark;
+      color: $text-primary;
       font-size: 16px;
       text-decoration: none;
       font-weight: 500;
       transition: 0.25s ease;
 
       &:hover {
-        color: $primary-color;
+        color: $primary-700;
       }
     }
 
     .header__button {
-      background-color: $primary-color;
-      color: $white-color;
+      background-color: $primary-700;
+      color: $white;
       padding: $sp-s $sp-l;
       border-radius: 50px;
       display: inline-block;
