@@ -1,20 +1,58 @@
+// font families
+$font-syne: 'Syne', sans-serif;
+$font-nunito: 'Nunito', sans-serif;
+
+
+// syne (hero titles)
+$font-hero-xl-size: 38px;
+$font-hero-xl-line: 40px;
+
+$font-hero-lg-size: 32px;
+$font-hero-lg-line: 36px;
+
+$font-hero-md-size: 28px;
+$font-hero-md-line: 32px;
+
+// nunito (headings)
+$font-h1-size: 24px;
+$font-h1-line: 28px;
+
+$font-h2-size: 20px;
+$font-h2-line: 24px;
+
+$font-h3-size: 18px;
+$font-h3-line: 22px;
+
+// nunito (body)
+$font-body-size: 16px;
+$font-body-line: 22px;
+
+$font-body-sm-size: 14px;
+$font-body-sm-line: 20px;
+
+
 html {
   font-size: 16px;
 }
 
 body {
-  font-family: 'Inter', 'Roboto', sans-serif;
-  color: $text-dark;
-  background: $white-color;
+  font-family: $font-nunito;
+  color: $text-primary;
+  background: $white;
   margin: 0;
 }
 
-h1, h2, h3, h4, h5 {
-  font-weight: 600;
+h1, h2 {
+  font-family: $font-syne;
+  margin: 0;
+}
+
+h3, h4, h5 {
+  font-family: $font-nunito;
   margin: 0;
 }
 
 p {
   margin: 0;
-  line-height: 1.6;
+  line-height: $font-body-line;
 }

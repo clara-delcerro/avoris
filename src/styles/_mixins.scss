@@ -24,6 +24,3 @@
 @mixin tablet-lg {
   @media (min-width: $bp-tablet-lg) { @content; }
 }
-@mixin mobile {
-  @media (min-width: $bp-tablet) { @content; }
-}

@@ -1,0 +1,80 @@
+/* hero titles */
+.text-hero-xl {
+  font-family: $font-syne;
+  font-size: $font-hero-xl-size;
+  line-height: $font-hero-xl-line;
+  font-weight: 700;
+
+  @include tablet {
+    font-size: $font-hero-lg-size;
+    line-height: $font-hero-lg-line;
+  }
+
+  @include desktop {
+    font-size: $font-hero-xl-size * 1.15;
+    line-height: $font-hero-xl-line * 1.15;
+  }
+}
+
+.text-hero-lg {
+  font-family: $font-syne;
+  font-size: $font-hero-lg-size;
+  line-height: $font-hero-lg-line;
+  font-weight: 700;
+
+  @include tablet {
+    font-size: $font-hero-md-size;
+    line-height: $font-hero-md-line;
+  }
+
+  @include desktop {
+    font-size: $font-hero-lg-size * 1.1;
+    line-height: $font-hero-lg-line * 1.1;
+  }
+}
+
+/* headings */
+.text-h1 {
+  font-family: $font-nunito;
+  font-size: $font-h1-size;
+  line-height: $font-h1-line;
+
+  @include tablet {
+    font-size: $font-h1-size * 1.1;
+    line-height: $font-h1-line * 1.1;
+  }
+}
+
+.text-h2 {
+  font-family: $font-nunito;
+  font-size: $font-h2-size;
+  line-height: $font-h2-line;
+
+  @include tablet {
+    font-size: $font-h2-size * 1.1;
+    line-height: $font-h2-line * 1.1;
+  }
+}
+
+.text-h3 {
+  font-family: $font-nunito;
+  font-size: $font-h3-size;
+  line-height: $font-h3-line;
+
+  @include tablet {
+    font-size: $font-h3-size * 1.05;
+  }
+}
+
+/* body text */
+.text-body {
+  font-family: $font-nunito;
+  font-size: $font-body-size;
+  line-height: $font-body-line;
+}
+
+.text-body-sm {
+  font-family: $font-nunito;
+  font-size: $font-body-sm-size;
+  line-height: $font-body-sm-line;
+}

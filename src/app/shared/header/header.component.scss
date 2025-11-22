@@ -2,17 +2,21 @@
 @import '../../../styles/mixins';
 
 .header {
-  background-color: $white-color;
-  padding: $sp-m 0;
+  background-color: $white;
+  border-bottom: 1px solid $secondary-400;
 
   &__container {
     @include flex(row, space-between, center);
-    padding: 0 $sp-l;
+    padding: $sp-ml;
   }
 
   &__logo img {
-    width: 110px;
-    height: auto;
+    width: auto;
+    height: $sp-ml;
+
+    @include tablet {
+      height: $sp-l;
+    }
   }
 
   &__menu-btn {
@@ -22,14 +26,16 @@
     padding: $sp-xs;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: $sp-s;
+    width: $sp-l;
+    height: $sp-l;
 
     .header__menu-icon {
-      width: 22px;
+      width: $sp-ml;
       height: 2px;
-      background-color: $text-dark;
-      border-radius: 2px;
       display: block;
+      background-color: $primary-700;
+      border-radius: $sp-xs;
     }
   }
 
@@ -39,8 +45,7 @@
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: $secondary-color-bg;
-    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
+    background-color: $secondary-050;
     padding: $sp-ml;
     transition: right 0.35s ease;
     display: flex;
@@ -73,20 +78,20 @@
     }
 
     .header__link {
-      color: $text-dark;
-      font-size: $sp-m;
+      color: $text-primary;
+      font-size: 16px;
       text-decoration: none;
       font-weight: 500;
       transition: 0.25s ease;
 
       &:hover {
-        color: $primary-color;
+        color: $primary-700;
       }
     }
 
     .header__button {
-      background-color: $primary-color;
-      color: $white-color;
+      background-color: $primary-700;
+      color: $white;
       padding: $sp-s $sp-l;
       border-radius: 50px;
       display: inline-block;
