@@ -1,0 +1,47 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.footer {
+  width: 100%;
+  @include flex(column, center, center);
+
+  &__top {
+    @include flex(row, flex-start, center);
+    padding: $sp-xxl 32px;
+    width: 100%;
+    background-color: $secondary-050;
+
+    @include tablet {
+      padding: $sp-xxl 28px;
+    }
+
+    @include tablet-lg {
+      padding: $sp-xxl 40px;
+    }
+
+    @include desktop {
+      padding: $sp-xxl 0;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    width: 128px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  &__bottom {
+    @include flex(row, center, center);
+    background-color: $basic-100;
+    width: 100%;
+    padding: $sp-m 0;
+  }
+
+  &__copy {
+    font-size: 14px;
+    color: $primary-700;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}

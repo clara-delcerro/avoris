@@ -82,12 +82,10 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        display: flex;
-        flex-direction: column;
+        @include flex(column);
 
         @include tablet-lg {
-          @include flex(row, center, center);
-          gap: $sp-m;
+          @include flex(row, center, center, $sp-m);
         }
 
         @include desktop {
@@ -119,8 +117,7 @@
             text-decoration: none;
             font-weight: 600;
             transition: 0.25s ease;
-            @include flex(row, flex-start, center);
-            gap: 6px;
+            @include flex(row, flex-start, center, 6px);
             padding: $sp-m;
             border-bottom: 1px solid $basic-100;
 
