@@ -1,1 +1,20 @@
-<p>cards-grid works!</p>
+<div class="cards-grid">
+
+  <div class="cards-section" *ngFor="let section of sections">
+    <h2 class="cards-section__title">{{ section.title }}</h2>
+
+    <div class="cards-section__grid">
+      <app-travel-card
+        *ngFor="let card of section.cards"
+        [image]="card.image"
+        [tag]="card.tag"
+        [location]="card.location"
+        [days]="card.days"
+        [title]="card.title"
+        [price]="card.price">
+      </app-travel-card>
+    </div>
+
+  </div>
+
+</div>
