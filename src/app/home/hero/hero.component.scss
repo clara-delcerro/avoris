@@ -7,7 +7,7 @@
   position: relative;
   overflow: hidden;
 
-  .hero__slider {
+  &__slider {
     width: 100%;
     height: 100%;
   }
@@ -16,19 +16,27 @@
     height: 100%;
   }
 
-  .hero__slide {
+  &__slide {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center center;
+    background-position: 50% center;
 
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+
+    @include tablet-lg {
+      background-position: 60% center;
+    }
+
+    @include desktop {
+      background-position: 70% center;
+    }
   }
 
-  .hero__content {
+  &__content {
     text-align: center;
     color: $white;
     display: flex;
@@ -38,64 +46,56 @@
     padding: 0 20px;
   }
 
-  .hero__title {
+  &__title {
     font-size: 28px;
     font-weight: 700;
   }
 
-  .hero__subtitle {
+  &__subtitle {
     font-size: 16px;
     font-weight: 400;
   }
 
-  .hero__button {
+  &__button {
     margin-top: 12px;
   }
 
   /* === FLECHAS === */
-  .hero__arrow--prev,
-  .hero__arrow--next {
-    width: 32px;
-    height: 32px;
-    background-color: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(6px);
-    border-radius: 50%;
+  &__arrow--prev,
+  &__arrow--next {
+    width: 40px;
+    height: 40px;
+    background-color: $primary-low-alpha;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 2px;
 
-    &::after {
-      content: "";
-      width: 14px;
-      height: 14px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+    svg {
+      color: $white;
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      background-color: $primary-700;
     }
   }
 
-  .hero__arrow--prev::after {
-    background-image: url('../../../assets/icons/chevron-left.svg');
-  }
-
-  .hero__arrow--next::after {
-    background-image: url('../../../assets/icons/chevron-right.svg');
-  }
-
-  /* === BULLETS === */
+  /* === BULLETS WRAPPER === */
   .swiper-pagination {
     position: absolute;
     bottom: 24px;
   }
+}
 
-  .swiper-pagination-bullet {
-    background: $white;
-    opacity: 0.5;
-  }
+/* === BULLETS === */
+:host ::ng-deep .swiper-pagination-bullet {
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+}
 
-  .swiper-pagination-bullet-active {
-    background: $secondary-500;
-    opacity: 1;
-  }
+:host ::ng-deep .swiper-pagination-bullet-active {
+  background-color: #ec7f3f !important;
 }

@@ -4,10 +4,11 @@
 
       <div class="swiper-slide hero__slide" style="background-image: url('../../../assets/img/hero-bg.png');">
         <div class="hero__content">
-          <span class="hero__badge">PENDING APPROVAL</span>
-          <h2 class="hero__title">Ruta por Australia</h2>
-          <p class="hero__subtitle">Si te va la aventura, no te lo puedes perder</p>
-          <button class="hero__button btn">Más información</button>
+          <div class="hero__content__text">
+            <h2 class="hero__title">Ruta por Australia</h2>
+            <p class="hero__subtitle">Si te va la aventura, no te lo puedes perder</p>
+          </div>
+          <button class="hero__button btn btn--secondary">Más información</button>
         </div>
       </div>
 
@@ -31,7 +32,17 @@
 
     <div class="swiper-pagination"></div>
 
-    <div class="swiper-button-prev hero__arrow hero__arrow--prev"></div>
-    <div class="swiper-button-next hero__arrow hero__arrow--next"></div>
+    <div class="swiper-button-prev hero__arrow hero__arrow--prev">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.71033 12.7082C8.31838 12.3174 8.31838 11.6826 8.71033 11.2919L13.7805 6.2371C14.1707 5.848 14.8022 5.848 15.1925 6.2371L15.2897 6.33395C15.6816 6.72472 15.6816 7.35954 15.2897 7.75031L11.027 12L15.2897 16.2498C15.6816 16.6405 15.6816 17.2753 15.2897 17.6661L15.1925 17.763C14.8022 18.1521 14.1707 18.1521 13.7805 17.763L8.71033 12.7082Z" fill="currentcolor"/>
+      </svg>
+    </div>
+
+    <div class="swiper-button-next hero__arrow hero__arrow--next">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15.2897 11.2918C15.6816 11.6826 15.6816 12.3174 15.2897 12.7081L10.2195 17.7629C9.82927 18.152 9.19776 18.152 8.80748 17.7629L8.71033 17.666C8.31837 17.2753 8.31838 16.6405 8.71033 16.2497L12.973 12L8.71033 7.75024C8.31838 7.35947 8.31838 6.72465 8.71033 6.33388L8.80748 6.23703C9.19776 5.84793 9.82927 5.84793 10.2195 6.23703L15.2897 11.2918Z" fill="currentcolor"/>
+    </svg>
+
+    </div>
   </div>
 </section>

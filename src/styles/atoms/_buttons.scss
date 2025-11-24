@@ -8,6 +8,8 @@
   font-weight: 600;
   border-radius: $sp-xxxl;
   text-decoration: none;
+  line-height: 24px;
+  font-size: $sp-m;
 
   //base
   padding: $sp-sm 40px;
@@ -15,5 +17,10 @@
 
   &:hover {
     background-color: $primary-800;
+  }
+
+  &--secondary {
+    background-color: $secondary-400;
+    color: $secondary-800;
   }
 }
