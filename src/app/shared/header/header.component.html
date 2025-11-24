@@ -40,38 +40,38 @@
         </li>
 
         <li class="header__list__item is-active">
-          <a href="#" class="header__link">
+          <a href="#" class="header__link" (click)="menu('Aventura')">
             <img src="../../../assets/icons/adventure.svg" alt="">
             <span>Aventura</span>
           </a>
         </li>
 
         <li class="header__list__item">
-          <a href="#" class="header__link">
+          <a href="#" class="header__link" (click)="menu('Destinos')">
             <img src="../../../assets/icons/world.svg" alt="">
             <span>Destinos</span>
           </a>
         </li>
 
         <li class="header__list__item">
-          <a href="#" class="header__link">
+          <a href="#" class="header__link" (click)="menu('Alojamientos')">
             <img src="../../../assets/icons/house.svg" alt="">
             <span>Alojamientos</span>
           </a>
         </li>
 
         <li class="header__list__item">
-          <a href="#" class="header__link">Sobre nosotros</a>
+          <a href="#" class="header__link" (click)="menu('Sobre nosotros')">Sobre nosotros</a>
         </li>
 
         <li class="header__list__item">
-          <a href="#" class="header__button btn">Reserva</a>
+          <a href="#" class="header__button btn" (click)="menu('Reserva')">Reserva</a>
         </li>
       </ul>
     </nav>
     <!-- end of navigation -->
 
-    <button class="header__book btn">
+    <button class="header__book btn"  (click)="menu('Reserva')">
       Reservar
     </button>
 

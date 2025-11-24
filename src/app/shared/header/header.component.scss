@@ -63,6 +63,7 @@
     height: 100vh;
     background-color: $basic-000;
     transition: right 0.35s ease;
+    z-index: 99;
 
     &--open {
       right: 0;

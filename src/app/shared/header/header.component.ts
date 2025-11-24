@@ -12,4 +12,8 @@ export class HeaderComponent {
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+  menu(opcion: string){
+    console.log('opcion :>> ', opcion);
+  }
 }

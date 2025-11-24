@@ -22,5 +22,9 @@
   &--secondary {
     background-color: $secondary-400;
     color: $secondary-800;
+
+    &:hover {
+      background-color: $secondary-500
+    }
   }
 }
