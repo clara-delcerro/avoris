@@ -1,0 +1,101 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.hero {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+
+  .hero__slider {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-wrapper {
+    height: 100%;
+  }
+
+  .hero__slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero__content {
+    text-align: center;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
+  }
+
+  .hero__title {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .hero__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .hero__button {
+    margin-top: 12px;
+  }
+
+  /* === FLECHAS === */
+  .hero__arrow--prev,
+  .hero__arrow--next {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .hero__arrow--prev::after {
+    background-image: url('../../../assets/icons/chevron-left.svg');
+  }
+
+  .hero__arrow--next::after {
+    background-image: url('../../../assets/icons/chevron-right.svg');
+  }
+
+  /* === BULLETS === */
+  .swiper-pagination {
+    position: absolute;
+    bottom: 24px;
+  }
+
+  .swiper-pagination-bullet {
+    background: $white;
+    opacity: 0.5;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $secondary-500;
+    opacity: 1;
+  }
+}
