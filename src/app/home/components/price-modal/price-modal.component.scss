@@ -45,7 +45,7 @@
   }
 
   &__title {
-    font-size: 14px;
+    font-size: $sp-m - 2;
     font-weight: 600;
     color: $text-primary;
   }
@@ -66,7 +66,7 @@
 
   &__destination {
     @include flex(row, flex-start, center, $sp-s + 1);
-    font-size: 14px;
+    font-size: $sp-m - 2;
 
     &-location {
       font-weight: 700;
@@ -93,7 +93,7 @@
 
   &__row {
     @include flex(row, space-between, center, $sp-m);
-    font-size: 14px;
+    font-size: $sp-m - 2;
     color: $text-primary;
     width: 100%;
   }
@@ -116,7 +116,7 @@
     padding: $sp-m $sp-l;
     border-top: 1px solid $basic-100;
     @include flex(row, space-between, center, $sp-m);
-    font-size: 14px;
+    font-size: $sp-m - 2;
     font-weight: 600;
 
     @include tablet {

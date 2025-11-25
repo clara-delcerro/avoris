@@ -1,0 +1,182 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+@import '../../../../styles/typography';
+
+.filters {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $basic-050;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  z-index: 9999;
+  padding: $sp-l;
+  overflow-y: auto;
+
+  &--open {
+    transform: translateX(0);
+  }
+
+  &__header {
+    @include flex(row, space-between, center);
+    margin-bottom: $sp-l;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__close img {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-xl;
+  }
+
+  /* SECCIONES */
+  &__section-toggle {
+    @include flex(row, space-between, center);
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    border: none;
+    font-size: $sp-m;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__chevron {
+    width: $sp-m;
+    transition: transform .3s ease;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-sm;
+    margin-top: $sp-sm;
+  }
+
+  &__checkbox {
+    @include flex(row, flex-start, center);
+    gap: $sp-sm;
+
+    input {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  /* Inputs precio */
+  &__input {
+    @include flex(row, flex-start, center);
+    gap: $sp-sm;
+    padding: $sp-sm $sp-m;
+    border: 1px solid $primary-700;
+    border-radius: 30px;
+
+    input {
+      border: none;
+      background: transparent;
+      width: 100%;
+      font-size: $sp-m - 2;
+      outline: none;
+    }
+
+    img {
+      width: $sp-m;
+      height: $sp-m;
+    }
+  }
+}
+
+/* Tooltip */
+.tooltip-wrapper {
+  position: relative;
+
+  .tooltip {
+    position: absolute;
+    top: -38px;
+    left: 0;
+    transform: translateY(-8px);
+    background: $basic-000;
+    padding: $sp-sm $sp-m;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+  }
+
+  &:hover .tooltip {
+    opacity: 1;
+  }
+}
+
+/* BOTÓN ABRIR */
+.filters__open-btn {
+  @include flex(row, flex-start, center);
+  gap: $sp-sm;
+  background: transparent;
+  border: 1px solid $primary-700;
+  border-radius: 30px;
+  padding: $sp-sm $sp-m;
+  font-size: $sp-m - 2;
+
+  img {
+    width: $sp-m;
+    height: $sp-m;
+  }
+}
+
+/* TABLET */
+@include tablet {
+  .filters {
+    width: 360px;
+    transform: translateX(-360px);
+  }
+
+  .filters--open {
+    transform: translateX(0);
+  }
+
+  .filters__open-btn {
+    display: flex;
+    position: absolute;
+    top: $sp-m;
+    left: $sp-m;
+  }
+}
+
+/* DESKTOP */
+@include desktop {
+  .filters {
+    position: static;
+    width: 360px;
+    height: auto;
+    transform: none;
+    background: transparent;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .filters__open-btn {
+    display: none;
+  }
+
+  .filters__header {
+    display: none;
+  }
+}

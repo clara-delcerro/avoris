@@ -77,7 +77,7 @@
     color: $primary-700;
     font-family: 'Syne', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: $sp-m - 2;
     line-height: 18px;
   }
 
@@ -85,7 +85,7 @@
     color: $text-primary;
     font-family: 'Syne', sans-serif;
     font-weight: 600;
-    font-size: 14px;
+    font-size: $sp-m - 2;
     line-height: 18px;
   }
 
@@ -118,7 +118,7 @@
     cursor: pointer;
 
     span {
-      font-size: 14px;
+      font-size: $sp-m - 2;
       line-height: $sp-m;
       font-weight: 600;
       color: $primary-700;

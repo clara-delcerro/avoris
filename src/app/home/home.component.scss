@@ -18,6 +18,19 @@
       max-width: 1128px;
     }
   }
+
+  &__content {
+    @include flex(column, center, center, $sp-ml);
+
+    @include tablet-lg {
+      @include flex(column, center, flex-start, $sp-ml);
+    }
+
+    @include desktop {
+      @include flex(row, center, flex-start, $sp-ml);
+    }
+  }
+
   &__intro {
     text-align: center;
     padding: 48px 20px 32px;

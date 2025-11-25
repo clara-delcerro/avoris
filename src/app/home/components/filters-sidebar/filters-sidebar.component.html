@@ -1,1 +1,121 @@
-<p>filters-sidebar works!</p>
+<!-- Botón de abrir filtros (solo mobile/tablet) -->
+<button class="filters__open-btn" (click)="open()">
+  <img src="assets/svg/filter.svg" alt="Filtrar" />
+  <span>Ver filtros</span>
+</button>
+
+<!-- Panel completo -->
+<aside class="filters" [class.filters--open]="isOpen">
+
+  <!-- Header mobile/tablet -->
+  <header class="filters__header">
+    <h2 class="filters__title">Filtrar mi búsqueda</h2>
+
+    <button class="filters__close" (click)="close()">
+      <img src="assets/svg/close.svg" alt="Cerrar" />
+    </button>
+  </header>
+
+  <div class="filters__content">
+
+    <!-- 1. DESTINOS -->
+    <div class="filters__section">
+      <button class="filters__section-toggle"
+              (click)="toggleSection('destinos')">
+        <span>Destinos</span>
+        <img src="assets/svg/arrow-down.svg" class="filters__chevron"
+             [class.open]="openSections['destinos']" />
+      </button>
+
+      <div class="filters__group" *ngIf="openSections['destinos']">
+        <label class="filters__checkbox">
+          <input type="checkbox" />
+          <span>Europa</span>
+        </label>
+        <label class="filters__checkbox">
+          <input type="checkbox" />
+          <span>África</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 2. AVENTURA -->
+    <div class="filters__section">
+      <button class="filters__section-toggle"
+              (click)="toggleSection('aventura')">
+        <span>Aventura</span>
+        <img src="assets/svg/arrow-down.svg" class="filters__chevron"
+             [class.open]="openSections['aventura']" />
+      </button>
+
+      <div class="filters__group" *ngIf="openSections['aventura']">
+
+        <!-- Ejemplo con tooltip -->
+        <label class="filters__checkbox tooltip-wrapper">
+          <input type="checkbox" />
+          <span>Quads</span>
+
+          <div class="tooltip">
+            Lorem ipsum
+          </div>
+        </label>
+
+        <label class="filters__checkbox">
+          <input type="checkbox" />
+          <span>Parapente</span>
+        </label>
+
+        <label class="filters__checkbox">
+          <input type="checkbox" />
+          <span>Buceo</span>
+        </label>
+
+        <!-- etc... -->
+      </div>
+    </div>
+
+    <!-- 3. ALOJAMIENTO -->
+    <div class="filters__section">
+      <button class="filters__section-toggle"
+              (click)="toggleSection('alojamiento')">
+        <span>Alojamiento</span>
+        <img src="assets/svg/arrow-down.svg" class="filters__chevron"
+             [class.open]="openSections['alojamiento']" />
+      </button>
+
+      <div class="filters__group" *ngIf="openSections['alojamiento']">
+        <label class="filters__checkbox">
+          <input type="checkbox" />
+          <span>Hotel</span>
+        </label>
+        <label class="filters__checkbox">
+          <input type="checkbox" />
+          <span>Hostal</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 4. PRECIO -->
+    <div class="filters__section">
+      <button class="filters__section-toggle"
+              (click)="toggleSection('precio')">
+        <span>Precio</span>
+        <img src="assets/svg/arrow-down.svg" class="filters__chevron"
+             [class.open]="openSections['precio']" />
+      </button>
+
+      <div class="filters__group" *ngIf="openSections['precio']">
+        <div class="filters__input">
+          <img src="assets/svg/tag.svg" />
+          <input placeholder="Mínimo" />
+        </div>
+
+        <div class="filters__input">
+          <img src="assets/svg/tag.svg" />
+          <input placeholder="Máximo" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</aside>
