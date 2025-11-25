@@ -37,13 +37,18 @@ export class CardsGridComponent {
           days: '9',
           title: 'Descubre Bangkok con Iberojet',
           price: 248
-        },
+        }
+      ]
+    },
+    {
+      title: 'Asia',
+      cards: [
         {
           image: '../../../assets/img/card-img_01.png',
           tag: 'Quads',
           location: 'Marruecos, África',
           days: '9',
-          title: 'Descubre Bangkok con Iberojet',
+          title: 'Descubre Bangkok con Iberojjet',
           price: 248
         },
         {
@@ -61,18 +66,13 @@ export class CardsGridComponent {
           days: '9',
           title: 'Descubre Bangkok con Iberojet',
           price: 248
-        }
-      ]
-    },
-    {
-      title: 'Asiaz',
-      cards: [
+        },
         {
           image: '../../../assets/img/card-img_01.png',
           tag: 'Quads',
           location: 'Marruecos, África',
           days: '9',
-          title: 'Descubre Bangkok con Iberojjet',
+          title: 'Descubre Bangkok con Iberojet',
           price: 248
         },
         {

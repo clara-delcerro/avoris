@@ -4,6 +4,9 @@
 .cards-grid {
   width: 100%;
   padding: 0 $sp-m;
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .cards-section {

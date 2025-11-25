@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgStyle } from '@angular/common';
 
 
@@ -21,4 +21,13 @@ export class TravelCardComponent {
   @Input() days!: string;
   @Input() title!: string;
   @Input() price!: number;
+
+  @Output() breakdownClick = new EventEmitter<{ location: string; days: string }>();
+
+  onBreakdownClick() {
+    this.breakdownClick.emit({
+      location: this.location,
+      days: this.days
+    });
+  }
 }
