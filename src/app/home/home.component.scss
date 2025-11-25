@@ -20,14 +20,16 @@
   }
 
   &__content {
-    @include flex(column, center, center, $sp-ml);
+    @include flex(column, center, center, $sp-l);
 
     @include tablet-lg {
-      @include flex(column, center, flex-start, $sp-ml);
+      @include flex(column, center, flex-start, $sp-l);
     }
 
     @include desktop {
-      @include flex(row, center, flex-start, $sp-ml);
+      display: grid;
+      grid-template-columns: 264px auto;
+      gap: $sp-l;
     }
   }
 

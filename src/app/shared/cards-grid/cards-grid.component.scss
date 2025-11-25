@@ -24,14 +24,10 @@
     @include grid(1, 24px);
 
     @include tablet {
-      @include grid(2);
+      @include grid(2fr);
     }
 
     @include tablet-lg {
-      @include grid(3);
-    }
-
-    @include desktop {
       @include grid(3);
     }
   }
