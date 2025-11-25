@@ -4,21 +4,31 @@
   </div>
 
   <div class="card__content">
-    <p class="card__meta">
-      <span class="card__location">{{ location }}</span>
-      <span class="card__days">{{ days }} días</span>
-    </p>
-
-    <h3 class="card__title">{{ title }}</h3>
+    <div class="card__top">
+      <p class="card__meta">
+        <span class="card__location">{{ location }}</span>
+        <span class="card__days">{{ days }} días</span>
+      </p>
+      <h3 class="card__title">{{ title }}</h3>
+    </div>
 
     <div class="card__bottom">
-      <div class="card__price-box">
-        <span class="card__price-label">Desde</span>
-        <span class="card__price">{{ price }} €</span>
-        <a class="card__breakdown">Ver desglose</a>
+      <div class="card__bottom__content">
+        <div class="card__price-box">
+          <span class="card__price-label">Desde</span>
+          <span class="card__price">
+            {{ price }},00 €
+          </span>
+        </div>
+        <a href="#" class="card__breakdown">
+          <span>Ver desglose</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.47182 10.1928C8.21131 10.4541 7.78809 10.4541 7.52758 10.1928L4.15774 6.81271C3.89834 6.55252 3.89834 6.13151 4.15774 5.87133L4.22231 5.80656C4.48282 5.54526 4.90604 5.54526 5.16655 5.80656L7.9997 8.64832L10.8328 5.80656C11.0934 5.54526 11.5166 5.54526 11.7771 5.80656L11.8417 5.87133C12.1011 6.13151 12.1011 6.55252 11.8417 6.81271L8.47182 10.1928Z" fill="currentcolor"/>
+          </svg>
+        </a>
       </div>
 
-      <button class="card__btn">Reservar</button>
+      <button class="card__btn btn btn--white" (click)="button('Reservar')">Reservar</button>
     </div>
   </div>
 </article>

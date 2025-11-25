@@ -62,7 +62,12 @@ $sp-s: 8px;
 $sp-sm: 12px;
 $sp-m: 16px;
 $sp-ml: 22px;
-$sp-l: 22px;
+$sp-l: 24px;
 $sp-xl: 34px;
 $sp-xxl: 48px;
 $sp-xxxl: 56px;
+
+
+
+// Shadow variables
+$shadow-base-default: 0 4px 8px rgba(0, 0, 0, 0.2);

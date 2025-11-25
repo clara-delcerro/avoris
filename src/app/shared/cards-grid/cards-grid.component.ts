@@ -18,49 +18,49 @@ export class CardsGridComponent {
           image: '../../../assets/img/card-img_01.png',
           tag: 'Quads',
           location: 'Marruecos, África',
-          days: 9,
+          days: '9',
           title: 'Descubre Bangkok con Iberojjet',
           price: 248
         },
         {
           image: '../../../assets/img/card-img_02.png',
-          tag: 'Parapente',
-          location: 'Egipto, África',
-          days: 7,
-          title: 'Ruta por el desierto',
-          price: 320
+          tag: 'Quads',
+          location: 'Marruecos, África',
+          days: '9',
+          title: 'Descubre Bangkok con Iberojet',
+          price: 248
         },
         {
           image: '../../../assets/img/card-img_03.png',
-          tag: 'Surf',
-          location: 'Indonesia, Asia',
-          days: 12,
-          title: 'Bali como nunca antes',
-          price: 680
+          tag: 'Quads',
+          location: 'Marruecos, África',
+          days: '9',
+          title: 'Descubre Bangkok con Iberojet',
+          price: 248
         },
         {
           image: '../../../assets/img/card-img_01.png',
-          tag: 'Parapente',
-          location: 'Egipto, África',
-          days: 7,
-          title: 'Ruta por el desierto',
-          price: 320
+          tag: 'Quads',
+          location: 'Marruecos, África',
+          days: '9',
+          title: 'Descubre Bangkok con Iberojet',
+          price: 248
         },
         {
           image: '../../../assets/img/card-img_02.png',
-          tag: 'Parapente',
-          location: 'Egipto, África',
-          days: 7,
-          title: 'Ruta por el desierto',
-          price: 320
+          tag: 'Quads',
+          location: 'Marruecos, África',
+          days: '9',
+          title: 'Descubre Bangkok con Iberojet',
+          price: 248
         },
         {
           image: '../../../assets/img/card-img_03.png',
-          tag: 'Parapente',
-          location: 'Egipto, África',
-          days: 7,
-          title: 'Ruta por el desierto',
-          price: 320
+          tag: 'Quads',
+          location: 'Marruecos, África',
+          days: '9',
+          title: 'Descubre Bangkok con Iberojet',
+          price: 248
         }
       ]
     },
@@ -71,25 +71,25 @@ export class CardsGridComponent {
           image: '../../../assets/img/card-img_01.png',
           tag: 'Quads',
           location: 'Marruecos, África',
-          days: 9,
+          days: '9',
           title: 'Descubre Bangkok con Iberojjet',
           price: 248
         },
         {
           image: '../../../assets/img/card-img_02.png',
-          tag: 'Parapente',
-          location: 'Egipto, África',
-          days: 7,
-          title: 'Ruta por el desierto',
-          price: 320
+          tag: 'Quads',
+          location: 'Marruecos, África',
+          days: '9',
+          title: 'Descubre Bangkok con Iberojet',
+          price: 248
         },
         {
           image: '../../../assets/img/card-img_03.png',
-          tag: 'Surf',
-          location: 'Indonesia, Asia',
-          days: 12,
-          title: 'Bali como nunca antes',
-          price: 680
+          tag: 'Quads',
+          location: 'Marruecos, África',
+          days: '9',
+          title: 'Descubre Bangkok con Iberojet',
+          price: 248
         }
       ]
     }

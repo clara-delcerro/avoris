@@ -24,3 +24,10 @@
 @mixin tablet-lg {
   @media (min-width: $bp-tablet-lg) { @content; }
 }
+
+
+
+// Shadow mixin
+@mixin shadow($shadow: $shadow-base-default) {
+  box-shadow: $shadow;
+}

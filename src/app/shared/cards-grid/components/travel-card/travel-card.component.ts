@@ -10,10 +10,15 @@ import { NgStyle } from '@angular/common';
   styleUrls: ['./travel-card.component.scss']
 })
 export class TravelCardComponent {
+  button(opcion: string){
+      console.log('opcion :>> ', opcion);
+  }
+
+
   @Input() image!: string;
   @Input() tag!: string;
   @Input() location!: string;
-  @Input() days!: number;
+  @Input() days!: string;
   @Input() title!: string;
   @Input() price!: number;
 }

@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.main {
+  &__wrapper {
+    margin: 0 auto;
+
+    @include tablet {
+      max-width: 552px;
+    }
+
+    @include tablet-lg {
+      max-width: 880px;
+    }
+
+    @include desktop {
+      max-width: 1128px;
+    }
+  }
+  &__intro {
+    text-align: center;
+    padding: 48px 20px 32px;
+
+    &-title {
+      font-size: $sp-xl + 4;
+      line-height: 40px;
+      font-weight: 700;
+      color: $text-primary;
+      margin-bottom: 12px;
+    }
+
+    &-subtitle {
+      font-size: $sp-ml;
+      line-height: $sp-l + 2;
+      color: #6B7D8D;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+  }
+
+  @include tablet {
+    &__intro {
+      padding: 64px 20px 40px;
+
+      &-title {
+        font-size: 28px;
+      }
+
+      &-subtitle {
+        font-size: $sp-ml;
+        line-height: $sp-l + 2;
+        color: #6B7D8D;
+        margin: 0 auto;
+      }
+    }
+  }
+}

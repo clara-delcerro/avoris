@@ -5,13 +5,20 @@
   <app-hero></app-hero>
   <!-- end of app-hero -->
 
-  <section class="main__content">
-    <app-filters-sidebar></app-filters-sidebar>
-    <!-- end of app-filters-sidebar -->
-
-    <app-cards-grid></app-cards-grid>
-    <!-- end of app-cards-grid -->
-  </section>
+  <div class="main__wrapper">
+    <section class="main__intro">
+      <h2 class="main__intro-title">Vive tus propias aventuras</h2>
+      <p class="main__intro-subtitle">
+        Para los que les gusta explorar y conocer mundo sin complejos
+      </p>
+    </section>
+    <section class="main__content">
+      <app-filters-sidebar></app-filters-sidebar>
+      <!-- end of app-filters-sidebar -->
+      <app-cards-grid></app-cards-grid>
+      <!-- end of app-cards-grid -->
+    </section>
+  </div>
   <!-- end of main__content -->
 
   <app-footer></app-footer>
