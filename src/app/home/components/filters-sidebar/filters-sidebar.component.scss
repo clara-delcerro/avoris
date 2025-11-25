@@ -151,13 +151,6 @@
   .filters--open {
     transform: translateX(0);
   }
-
-  .filters__open-btn {
-    display: flex;
-    position: absolute;
-    top: $sp-m;
-    left: $sp-m;
-  }
 }
 
 /* DESKTOP */
