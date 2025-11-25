@@ -5,7 +5,7 @@ import { TravelCardComponent } from './components/travel-card/travel-card.compon
 @Component({
   selector: 'app-cards-grid',
   standalone: true,
-  imports: [CommonModule, NgFor, NgIf, TravelCardComponent],
+  imports: [CommonModule, NgFor, TravelCardComponent],
   templateUrl: './cards-grid.component.html',
   styleUrls: ['./cards-grid.component.scss']
 })

@@ -16,19 +16,15 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  @include tablet {
+   @include tablet {
     position: absolute;
-    bottom: 0;
-    right: 0;
     width: 360px;
-    max-height: 420px;
+    left: 0;
+    bottom: 0;
     inset: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: auto;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(#000000, 0.15);
-    overflow-y: auto;
+    box-shadow: $shadow-base-default;
   }
 
   &--open {
@@ -36,13 +32,16 @@
   }
 
   &__header {
-    @include flex(row, space-between, center, $sp-m);
-    padding: $sp-m $sp-l;
+    @include flex(row, space-between, center);
+    background-color: $secondary-050;
+    padding: $sp-sm $sp-m;
     border-bottom: 1px solid $basic-100;
-    position: sticky;
-    top: 0;
-    background-color: $basic-000;
-    z-index: 1;
+
+    span {
+      font-size: 18px;
+      font-weight: 700;
+      color: $text-primary;
+    }
   }
 
   &__title {
@@ -61,61 +60,93 @@
   }
 
   &__body {
-    padding: $sp-l;
+    padding: $sp-l $sp-m;
     @include flex(column, flex-start, flex-start, $sp-l);
   }
 
   &__destination {
-    @include flex(row, flex-start, center, $sp-xs);
+    @include flex(row, flex-start, center, $sp-s + 1);
     font-size: 14px;
-  }
 
-  &__destination-location {
-    font-weight: 700;
-    color: $text-primary;
-    font-family: $font-syne;
-  }
+    &-location {
+      font-weight: 700;
+      color: $text-primary;
+      font-family: $font-syne;
+      font-size: $sp-m + 2;
+      line-height: $sp-l;
+      color: $primary-700;
+    }
 
-  &__destination-days {
-    color: $text-secondary;
+    &-days {
+      color: $text-primary;
+      font-family: $font-syne;
+      font-size: $sp-m + 2;
+      line-height: $sp-l;
+      font-weight: 500;
+    }
   }
 
   &__rows {
     width: 100%;
     @include flex(column, flex-start, flex-start, $sp-sm);
-    margin-top: $sp-m;
   }
 
   &__row {
     @include flex(row, space-between, center, $sp-m);
     font-size: 14px;
     color: $text-primary;
+    width: 100%;
   }
 
   &__label {
-    color: $text-secondary;
+    color: $text-primary;
+    font-weight: 600;
+    font-size: $sp-m;
+    line-height: $sp-ml - 2;
   }
 
   &__value {
-    font-weight: 600;
+    font-weight: 700;
+    color: $text-primary;
+    font-size: $sp-m + 2;
+    line-height: $sp-ml - 2;
   }
 
   &__footer {
-    margin-top: auto;
     padding: $sp-m $sp-l;
     border-top: 1px solid $basic-100;
     @include flex(row, space-between, center, $sp-m);
     font-size: 14px;
     font-weight: 600;
+
+    @include tablet {
+      background-color: $secondary-050;
+    }
   }
 
   &__final-label {
     color: $text-primary;
+    font-weight: 700;
+    font-size: $sp-m + 2;
+    line-height: $sp-ml;
   }
 
   &__final-value {
     color: $text-primary;
+    font-weight: 700;
+    font-size: $sp-ml;
+    line-height: $sp-l;
   }
+}
 
+.price-modal--up {
+  top: auto;
+  bottom: 100%;
+  transform: translateY(-16px);
+}
 
+.price-modal--down {
+  top: 100%;
+  bottom: auto;
+  transform: translateY(16px);
 }

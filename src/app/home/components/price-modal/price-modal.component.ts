@@ -19,4 +19,16 @@ export class PriceModalComponent {
   onClose() {
     this.close.emit();
   }
+
+  ngOnInit() {
+    if (window.innerWidth < 744) {
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  ngOnDestroy() {
+    if (window.innerWidth < 744) {
+      document.body.style.overflow = '';
+    }
+  }
 }
