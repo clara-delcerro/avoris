@@ -1,19 +1,18 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { NgStyle } from '@angular/common';
-
+import { NgStyle, CommonModule } from '@angular/common';
+import { PriceModalComponent } from "../../../../home/components/price-modal/price-modal.component";
 
 @Component({
   selector: 'app-travel-card',
   standalone: true,
-  imports: [NgStyle],
+  imports: [NgStyle, CommonModule, PriceModalComponent],
   templateUrl: './travel-card.component.html',
   styleUrls: ['./travel-card.component.scss']
 })
 export class TravelCardComponent {
   button(opcion: string){
-      console.log('opcion :>> ', opcion);
+    console.log('opcion :>> ', opcion);
   }
-
 
   @Input() image!: string;
   @Input() tag!: string;
@@ -22,21 +21,13 @@ export class TravelCardComponent {
   @Input() title!: string;
   @Input() price!: number;
 
-  @Output() breakdownClick = new EventEmitter<{ location: string; days: string }>();
+  isModalOpen = false;
 
-  onBreakdownClick() {
-    this.breakdownClick.emit({
-      location: this.location,
-      days: this.days
-    });
+  openLocalModal() {
+    this.isModalOpen = true;
   }
 
-  @Output() openBreakdown = new EventEmitter<any>();
-
-  openModal(cardData: any, cardElement: HTMLElement) {
-    this.openBreakdown.emit({
-      ...cardData,
-      element: cardElement
-    });
+  closeModal() {
+    this.isModalOpen = false;
   }
 }
