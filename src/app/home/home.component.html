@@ -15,7 +15,7 @@
     <section class="main__content">
       <app-filters-sidebar></app-filters-sidebar>
       <!-- end of app-filters-sidebar -->
-      <app-cards-grid></app-cards-grid>
+      <app-cards-grid (openBreakdown)="onOpenBreakdown($event)"></app-cards-grid>
       <!-- end of app-cards-grid -->
     </section>
   </div>
@@ -26,5 +26,10 @@
 </main>
 <!-- end of main -->
 
-<app-price-modal></app-price-modal>
+<app-price-modal
+  [location]="breakdownLocation"
+  [days]="breakdownDays"
+  [isOpen]="isPriceModalOpen"
+  (close)="onClosePriceModal()">
+</app-price-modal>
 <!-- end of price-modal -->

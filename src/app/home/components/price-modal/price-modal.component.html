@@ -1,1 +1,38 @@
-<p>price-modal works!</p>
+<section class="price-modal" [class.price-modal--open]="isOpen" *ngIf="isOpen">
+  <header class="price-modal__header">
+    <h2 class="price-modal__title">Desglose de precios</h2>
+
+    <button type="button" class="price-modal__close" (click)="onClose()" aria-label="Cerrar desglose">
+      ✕
+    </button>
+  </header>
+
+  <div class="price-modal__body">
+    <div class="price-modal__destination">
+      <span class="price-modal__destination-location">{{ location }}</span>
+      <span class="price-modal__destination-days">{{ days }} días</span>
+    </div>
+
+    <div class="price-modal__rows">
+      <div class="price-modal__row">
+        <span class="price-modal__label">Precio antes de impuestos</span>
+        <span class="price-modal__value">1.124,00 €</span>
+      </div>
+
+      <div class="price-modal__row">
+        <span class="price-modal__label">Impuesto</span>
+        <span class="price-modal__value">4,43 €</span>
+      </div>
+
+      <div class="price-modal__row">
+        <span class="price-modal__label">Lorem ipsum</span>
+        <span class="price-modal__value">150,42 €</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="price-modal__footer">
+    <span class="price-modal__final-label">Precio final</span>
+    <span class="price-modal__final-value">2.455,00 €</span>
+  </footer>
+</section>

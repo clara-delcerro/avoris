@@ -14,5 +14,22 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  isPriceModalOpen = false;
+  breakdownLocation = '';
+  breakdownDays = '';
 
+  onOpenBreakdown(data: { location: string; days: string }) {
+    this.breakdownLocation = data.location;
+    this.breakdownDays = data.days;
+    this.isPriceModalOpen = true;
+
+    if (window.innerWidth < 744) {
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  onClosePriceModal() {
+    this.isPriceModalOpen = false;
+    document.body.style.overflow = '';
+  }
 }

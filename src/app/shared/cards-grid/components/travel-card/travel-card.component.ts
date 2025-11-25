@@ -30,4 +30,13 @@ export class TravelCardComponent {
       days: this.days
     });
   }
+
+  @Output() openBreakdown = new EventEmitter<any>();
+
+  openModal(cardData: any, cardElement: HTMLElement) {
+    this.openBreakdown.emit({
+      ...cardData,
+      element: cardElement
+    });
+  }
 }

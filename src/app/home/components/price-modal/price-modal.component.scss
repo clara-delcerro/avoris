@@ -1,0 +1,116 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/variables';
+@import '../../../../styles/typography';
+
+
+
+.price-modal {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $basic-000;
+  z-index: 1000;
+  display: none;
+  @include flex(column, flex-start, stretch, 0);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &--open {
+    display: flex;
+  }
+
+  &__header {
+    @include flex(row, space-between, center, $sp-m);
+    padding: $sp-m $sp-l;
+    border-bottom: 1px solid $basic-100;
+    position: sticky;
+    top: 0;
+    background-color: $basic-000;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__close {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    color: $text-primary;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__body {
+    padding: $sp-l;
+    @include flex(column, flex-start, flex-start, $sp-l);
+  }
+
+  &__destination {
+    @include flex(row, flex-start, center, $sp-xs);
+    font-size: 14px;
+  }
+
+  &__destination-location {
+    font-weight: 700;
+    color: $text-primary;
+    font-family: $font-syne;
+  }
+
+  &__destination-days {
+    color: $text-secondary;
+  }
+
+  &__rows {
+    width: 100%;
+    @include flex(column, flex-start, flex-start, $sp-sm);
+    margin-top: $sp-m;
+  }
+
+  &__row {
+    @include flex(row, space-between, center, $sp-m);
+    font-size: 14px;
+    color: $text-primary;
+  }
+
+  &__label {
+    color: $text-secondary;
+  }
+
+  &__value {
+    font-weight: 600;
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding: $sp-m $sp-l;
+    border-top: 1px solid $basic-100;
+    @include flex(row, space-between, center, $sp-m);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__final-label {
+    color: $text-primary;
+  }
+
+  &__final-value {
+    color: $text-primary;
+  }
+
+  @include tablet {
+    width: 360px;
+    max-height: 420px;
+    inset: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(#000000, 0.15);
+    overflow-y: auto;
+  }
+}

@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { NgFor, NgIf } from '@angular/common';
 import { TravelCardComponent } from './components/travel-card/travel-card.component';
 
 @Component({
   selector: 'app-cards-grid',
   standalone: true,
-  imports: [CommonModule, TravelCardComponent],
+  imports: [CommonModule, NgFor, NgIf, TravelCardComponent],
   templateUrl: './cards-grid.component.html',
   styleUrls: ['./cards-grid.component.scss']
 })
 export class CardsGridComponent {
+  @Output() openBreakdown = new EventEmitter<{ location: string; days: string }>();
+
   sections = [
     {
       title: 'Asia',
@@ -94,4 +97,8 @@ export class CardsGridComponent {
       ]
     }
   ];
+
+  onCardBreakdown(data: { location: string; days: string }) {
+    this.openBreakdown.emit(data);
+  }
 }

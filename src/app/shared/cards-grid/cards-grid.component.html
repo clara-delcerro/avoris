@@ -11,7 +11,8 @@
         [location]="card.location"
         [days]="card.days"
         [title]="card.title"
-        [price]="card.price">
+        [price]="card.price"
+        (breakdownClick)="onCardBreakdown($event)">
       </app-travel-card>
     </div>
 
