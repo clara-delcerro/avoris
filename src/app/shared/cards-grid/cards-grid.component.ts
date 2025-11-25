@@ -1,6 +1,5 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
 import { TravelCardComponent } from './components/travel-card/travel-card.component';
 
 @Component({

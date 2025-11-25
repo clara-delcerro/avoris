@@ -16,6 +16,21 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
+  @include tablet {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 360px;
+    max-height: 420px;
+    inset: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(#000000, 0.15);
+    overflow-y: auto;
+  }
+
   &--open {
     display: flex;
   }
@@ -102,15 +117,5 @@
     color: $text-primary;
   }
 
-  @include tablet {
-    width: 360px;
-    max-height: 420px;
-    inset: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(#000000, 0.15);
-    overflow-y: auto;
-  }
+
 }
