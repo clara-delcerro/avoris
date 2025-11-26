@@ -18,10 +18,18 @@ export class FiltersSidebarComponent {
 
   close() {
     this.isOpen = false;
+
+    if (window.innerWidth < 744) {
+      document.body.style.overflow = '';
+    }
   }
 
   open() {
     this.isOpen = true;
+
+    if (window.innerWidth < 744) {
+      document.body.style.overflow = 'hidden';
+    }
   }
 
   toggleSection(section: string) {
@@ -29,9 +37,9 @@ export class FiltersSidebarComponent {
   }
 
   openSections: Record<string, boolean> = {
-    destinos: true,
+    destinos: false,
     aventura: true,
-    alojamiento: true,
+    alojamiento: false,
     precio: true
   };
 

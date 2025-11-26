@@ -1,6 +1,6 @@
 <!-- Botón de abrir filtros (solo mobile/tablet) -->
 <button class="filters__open-btn" (click)="open()">
-  <img src="assets/svg/filter.svg" alt="Filtrar" />
+  <img src="../../../../assets/icons/filters.svg" alt="Filtrar" />
   <span>Ver filtros</span>
 </button>
 
@@ -12,85 +12,159 @@
     <h2 class="filters__title">Filtrar mi búsqueda</h2>
 
     <button class="filters__close" (click)="close()">
-      <img src="assets/svg/close.svg" alt="Cerrar" />
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="mask0_2016_97525" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+        <rect width="24" height="24" fill="#D9D9D9"/>
+        </mask>
+        <g mask="url(#mask0_2016_97525)">
+        <path d="M18.8998 17.4999C19.0998 17.6999 19.1998 17.8999 19.1998 18.1999C19.1998 18.4999 19.0998 18.6999 18.8998 18.8999C18.6998 19.0999 18.4998 19.1999 18.1998 19.1999C17.8998 19.1999 17.6998 19.0999 17.4998 18.8999L11.9998 13.3999L6.4998 18.8999C6.2998 19.0999 6.0998 19.1999 5.7998 19.1999C5.4998 19.1999 5.2998 19.0999 5.0998 18.8999C4.8998 18.6999 4.7998 18.4999 4.7998 18.1999C4.7998 17.8999 4.8998 17.6999 5.0998 17.4999L10.5998 11.9999L5.0998 6.49993C4.9998 6.29993 4.8998 6.09993 4.8998 5.79993C4.8998 5.49993 4.9998 5.29993 5.1998 5.09993C5.5998 4.69993 6.1998 4.69993 6.5998 5.09993L12.0998 10.5999L17.5998 5.09993C17.7998 4.89993 17.9998 4.79993 18.2998 4.79993C18.5998 4.79993 18.7998 4.89993 18.9998 5.09993C19.1998 5.29993 19.2998 5.49993 19.2998 5.79993C19.2998 6.09993 18.9998 6.29993 18.8998 6.49993L13.3998 11.9999L18.8998 17.4999Z" fill="currentcolor"/>
+        </g>
+      </svg>
     </button>
   </header>
 
   <div class="filters__content">
 
-    <!-- 1. DESTINOS -->
+    <!-- Destinos -->
     <div class="filters__section">
       <button class="filters__section-toggle"
-              (click)="toggleSection('destinos')">
-        <span>Destinos</span>
-        <img src="assets/svg/arrow-down.svg" class="filters__chevron"
-             [class.open]="openSections['destinos']" />
+              (click)="toggleSection('destinos')"
+              [class.open]="openSections['destinos']">
+        <div class="filters__section-toggle__title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.4726 20.3493C16.4302 20.3493 20.4492 16.3527 20.4492 11.4227C20.4492 6.49267 16.4302 2.49609 11.4726 2.49609C6.51503 2.49609 2.49609 6.49267 2.49609 11.4227C2.49609 16.3527 6.51503 20.3493 11.4726 20.3493Z" stroke="currentcolor" stroke-width="1.2672" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3.18848 14.8585H5.60524C6.2462 14.8585 6.86091 14.6053 7.31414 14.1546C7.76737 13.7039 8.022 13.0926 8.022 12.4552V10.3952C8.022 9.7578 8.27662 9.1465 8.72985 8.6958C9.18308 8.24509 9.79779 7.99188 10.4388 7.99188C11.0797 7.99188 11.6944 7.73868 12.1477 7.28797C12.6009 6.83726 12.8555 6.22597 12.8555 5.58857V2.59473" stroke="currentcolor" stroke-width="1.2672" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20.4461 11.2827C19.7547 10.9259 18.9879 10.7377 18.2089 10.7334H15.2673C14.6264 10.7334 14.0117 10.9866 13.5584 11.4373C13.1052 11.888 12.8506 12.4993 12.8506 13.1367C12.8506 13.7741 13.1052 14.3854 13.5584 14.8361C14.0117 15.2868 14.6264 15.54 15.2673 15.54C15.7252 15.54 16.1643 15.7209 16.488 16.0428C16.8117 16.3648 16.9936 16.8014 16.9936 17.2567V18.4515" stroke="currentcolor" stroke-width="1.2672" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.9144 19.7887C11.0658 19.449 11.0892 19.0374 10.9141 18.6727C10.7389 18.3081 10.5452 17.787 10.1461 17.611C9.74691 17.435 9.30393 17.4011 8.91458 17.5169C8.52523 17.6326 8.2214 17.8885 8.06994 18.2282C7.96175 18.4708 7.74473 18.6535 7.46662 18.7362C7.18852 18.8189 6.8721 18.7947 6.58699 18.669L5.83877 18.339" stroke="currentcolor" stroke-width="1.2672" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          <span>Destinos</span>
+        </div>
+
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="filters__chevron">
+          <path d="M15.2897 11.2918C15.6816 11.6826 15.6816 12.3174 15.2897 12.7081L10.2195 17.7629C9.82927 18.152 9.19776 18.152 8.80748 17.7629L8.71033 17.666C8.31837 17.2753 8.31838 16.6405 8.71033 16.2497L12.973 12L8.71033 7.75024C8.31838 7.35947 8.31838 6.72465 8.71033 6.33388L8.80748 6.23703C9.19776 5.84793 9.82927 5.84793 10.2195 6.23703L15.2897 11.2918Z" fill="currentcolor"/>
+        </svg>
+
       </button>
 
       <div class="filters__group" *ngIf="openSections['destinos']">
         <label class="filters__checkbox">
           <input type="checkbox" />
           <span>Europa</span>
+          <div class="tooltip-wrapper">
+            <span class="tooltip">Lorem ipsum</span>
+
+            <img src="../../../../assets/icons/info.svg" alt="info" class="filters__info-icon" />
+          </div>
         </label>
         <label class="filters__checkbox">
           <input type="checkbox" />
           <span>África</span>
+
+          <div class="tooltip-wrapper">
+            <span class="tooltip">Lorem ipsum</span>
+
+            <img src="../../../../assets/icons/info.svg" alt="info" class="filters__info-icon" />
+          </div>
         </label>
       </div>
     </div>
 
-    <!-- 2. AVENTURA -->
+    <!-- Aventura -->
     <div class="filters__section">
       <button class="filters__section-toggle"
-              (click)="toggleSection('aventura')">
-        <span>Aventura</span>
-        <img src="assets/svg/arrow-down.svg" class="filters__chevron"
-             [class.open]="openSections['aventura']" />
+              (click)="toggleSection('aventura')"
+              [class.open]="openSections['aventura']">
+        <div class="filters__section-toggle__title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_14949_1593)">
+            <path d="M15.375 6.75C16.4105 6.75 17.25 5.91053 17.25 4.875C17.25 3.83947 16.4105 3 15.375 3C14.3395 3 13.5 3.83947 13.5 4.875C13.5 5.91053 14.3395 6.75 15.375 6.75Z" stroke="currentcolor" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M0.75 18.7501L7.60312 7.11948C7.6693 7.0067 7.76381 6.91318 7.87728 6.84819C7.99075 6.78321 8.11924 6.74902 8.25 6.74902C8.38076 6.74902 8.50925 6.78321 8.62272 6.84819C8.73619 6.91318 8.8307 7.0067 8.89688 7.11948L15.75 18.7501H0.75Z" stroke="currentcolor" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.7207 12H11.7801" stroke="currentcolor" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.7451 15.3476L16.8445 10.1173C16.9109 10.0054 17.0053 9.91265 17.1184 9.84826C17.2315 9.78386 17.3594 9.75 17.4895 9.75C17.6196 9.75 17.7475 9.78386 17.8606 9.84826C17.9737 9.91265 18.0681 10.0054 18.1345 10.1173L23.2504 18.7498H15.7504" stroke="currentcolor" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_14949_1593">
+            <rect width="24" height="24" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+
+          <span>Aventura</span>
+        </div>
+
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="filters__chevron">
+          <path d="M15.2897 11.2918C15.6816 11.6826 15.6816 12.3174 15.2897 12.7081L10.2195 17.7629C9.82927 18.152 9.19776 18.152 8.80748 17.7629L8.71033 17.666C8.31837 17.2753 8.31838 16.6405 8.71033 16.2497L12.973 12L8.71033 7.75024C8.31838 7.35947 8.31838 6.72465 8.71033 6.33388L8.80748 6.23703C9.19776 5.84793 9.82927 5.84793 10.2195 6.23703L15.2897 11.2918Z" fill="currentcolor"/>
+        </svg>
+
       </button>
 
       <div class="filters__group" *ngIf="openSections['aventura']">
-
-        <!-- Ejemplo con tooltip -->
-        <label class="filters__checkbox tooltip-wrapper">
+        <label class="filters__checkbox">
           <input type="checkbox" />
-          <span>Quads</span>
+          <span>Europa</span>
+          <div class="tooltip-wrapper">
+            <span class="tooltip">Lorem ipsum</span>
 
-          <div class="tooltip">
-            Lorem ipsum
+            <img src="../../../../assets/icons/info.svg" alt="info" class="filters__info-icon" />
+          </div>
+        </label>
+        <label class="filters__checkbox">
+          <input type="checkbox" />
+          <span>África</span>
+          <div class="tooltip-wrapper">
+            <span class="tooltip">Lorem ipsum</span>
+
+            <img src="../../../../assets/icons/info.svg" alt="info" class="filters__info-icon" />
           </div>
         </label>
 
-        <label class="filters__checkbox">
-          <input type="checkbox" />
-          <span>Parapente</span>
-        </label>
-
-        <label class="filters__checkbox">
-          <input type="checkbox" />
-          <span>Buceo</span>
-        </label>
-
-        <!-- etc... -->
+        <button type="button" class="filters__more">Ver 21 más</button>
       </div>
     </div>
 
-    <!-- 3. ALOJAMIENTO -->
+    <!-- Alojamiento -->
     <div class="filters__section">
       <button class="filters__section-toggle"
-              (click)="toggleSection('alojamiento')">
-        <span>Alojamiento</span>
-        <img src="assets/svg/arrow-down.svg" class="filters__chevron"
-             [class.open]="openSections['alojamiento']" />
+              (click)="toggleSection('alojamiento')"
+              [class.open]="openSections['alojamiento']">
+        <div class="filters__section-toggle__title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12.5274" cy="8.30373" r="1.056" stroke="currentcolor" stroke-width="1.056"/>
+            <path d="M11.5576 4.17969C12.1139 3.69597 12.9418 3.69597 13.498 4.17969L20.2832 10.0791C20.6374 10.3871 20.8247 10.8456 20.7871 11.3135L20.2129 18.4551C20.1509 19.2228 19.5094 19.8142 18.7393 19.8145H6.31641C5.54616 19.8143 4.90474 19.2228 4.84277 18.4551L4.26855 11.3135C4.231 10.8456 4.41823 10.3871 4.77246 10.0791L11.5576 4.17969Z" stroke="currentcolor" stroke-width="1.2672"/>
+            <line x1="7.45098" y1="19.8934" x2="7.45098" y2="21.9257" stroke="currentcolor" stroke-width="1.2672" stroke-linecap="round"/>
+            <line x1="17.2557" y1="19.8934" x2="17.2557" y2="21.9257" stroke="currentcolor" stroke-width="1.2672" stroke-linecap="round"/>
+            <path d="M14.9955 19.2622V14.7751C14.9955 13.6087 14.0499 12.6631 12.8835 12.6631H12.2048C11.0383 12.6631 10.0928 13.6087 10.0928 14.7751V19.2622" stroke="currentcolor" stroke-width="1.2672"/>
+          </svg>
+
+
+          <span>Alojamiento</span>
+        </div>
+
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="filters__chevron">
+          <path d="M15.2897 11.2918C15.6816 11.6826 15.6816 12.3174 15.2897 12.7081L10.2195 17.7629C9.82927 18.152 9.19776 18.152 8.80748 17.7629L8.71033 17.666C8.31837 17.2753 8.31838 16.6405 8.71033 16.2497L12.973 12L8.71033 7.75024C8.31838 7.35947 8.31838 6.72465 8.71033 6.33388L8.80748 6.23703C9.19776 5.84793 9.82927 5.84793 10.2195 6.23703L15.2897 11.2918Z" fill="currentcolor"/>
+        </svg>
+
       </button>
 
       <div class="filters__group" *ngIf="openSections['alojamiento']">
         <label class="filters__checkbox">
           <input type="checkbox" />
-          <span>Hotel</span>
+          <span>Europa</span>
+          <div class="tooltip-wrapper">
+            <span class="tooltip">Lorem ipsum</span>
+
+            <img src="../../../../assets/icons/info.svg" alt="info" class="filters__info-icon" />
+          </div>
         </label>
         <label class="filters__checkbox">
           <input type="checkbox" />
-          <span>Hostal</span>
+          <span>África</span>
+          <div class="tooltip-wrapper">
+            <span class="tooltip">Lorem ipsum</span>
+
+            <img src="../../../../assets/icons/info.svg" alt="info" class="filters__info-icon" />
+          </div>
         </label>
       </div>
     </div>
@@ -98,20 +172,61 @@
     <!-- 4. PRECIO -->
     <div class="filters__section">
       <button class="filters__section-toggle"
-              (click)="toggleSection('precio')">
-        <span>Precio</span>
-        <img src="assets/svg/arrow-down.svg" class="filters__chevron"
-             [class.open]="openSections['precio']" />
+              (click)="toggleSection('precio')"
+              [class.open]="openSections['precio']">
+        <div class="filters__section-toggle__title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2007_86368)">
+            <path d="M3.96938 12.9694C3.82899 12.8288 3.75009 12.6383 3.75 12.4397V3.75H12.4397C12.6383 3.75009 12.8288 3.82899 12.9694 3.96938L22.2806 13.2806C22.4212 13.4213 22.5001 13.612 22.5001 13.8108C22.5001 14.0096 22.4212 14.2003 22.2806 14.3409L14.3438 22.2806C14.2031 22.4212 14.0124 22.5001 13.8136 22.5001C13.6148 22.5001 13.4241 22.4212 13.2834 22.2806L3.96938 12.9694Z" stroke="currentcolor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.875 9C8.49632 9 9 8.49632 9 7.875C9 7.25368 8.49632 6.75 7.875 6.75C7.25368 6.75 6.75 7.25368 6.75 7.875C6.75 8.49632 7.25368 9 7.875 9Z" fill="currentcolor"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2007_86368">
+            <rect width="24" height="24" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+
+
+
+          <span>Precio</span>
+        </div>
+
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="filters__chevron">
+          <path d="M15.2897 11.2918C15.6816 11.6826 15.6816 12.3174 15.2897 12.7081L10.2195 17.7629C9.82927 18.152 9.19776 18.152 8.80748 17.7629L8.71033 17.666C8.31837 17.2753 8.31838 16.6405 8.71033 16.2497L12.973 12L8.71033 7.75024C8.31838 7.35947 8.31838 6.72465 8.71033 6.33388L8.80748 6.23703C9.19776 5.84793 9.82927 5.84793 10.2195 6.23703L15.2897 11.2918Z" fill="currentcolor"/>
+        </svg>
       </button>
 
-      <div class="filters__group" *ngIf="openSections['precio']">
+      <div class="filters__group filters__group--price" *ngIf="openSections['precio']">
         <div class="filters__input">
-          <img src="assets/svg/tag.svg" />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2007_86368)">
+            <path d="M3.96938 12.9694C3.82899 12.8288 3.75009 12.6383 3.75 12.4397V3.75H12.4397C12.6383 3.75009 12.8288 3.82899 12.9694 3.96938L22.2806 13.2806C22.4212 13.4213 22.5001 13.612 22.5001 13.8108C22.5001 14.0096 22.4212 14.2003 22.2806 14.3409L14.3438 22.2806C14.2031 22.4212 14.0124 22.5001 13.8136 22.5001C13.6148 22.5001 13.4241 22.4212 13.2834 22.2806L3.96938 12.9694Z" stroke="currentcolor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.875 9C8.49632 9 9 8.49632 9 7.875C9 7.25368 8.49632 6.75 7.875 6.75C7.25368 6.75 6.75 7.25368 6.75 7.875C6.75 8.49632 7.25368 9 7.875 9Z" fill="currentcolor"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2007_86368">
+            <rect width="24" height="24" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+
           <input placeholder="Mínimo" />
         </div>
 
         <div class="filters__input">
-          <img src="assets/svg/tag.svg" />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2007_86368)">
+            <path d="M3.96938 12.9694C3.82899 12.8288 3.75009 12.6383 3.75 12.4397V3.75H12.4397C12.6383 3.75009 12.8288 3.82899 12.9694 3.96938L22.2806 13.2806C22.4212 13.4213 22.5001 13.612 22.5001 13.8108C22.5001 14.0096 22.4212 14.2003 22.2806 14.3409L14.3438 22.2806C14.2031 22.4212 14.0124 22.5001 13.8136 22.5001C13.6148 22.5001 13.4241 22.4212 13.2834 22.2806L3.96938 12.9694Z" stroke="currentcolor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.875 9C8.49632 9 9 8.49632 9 7.875C9 7.25368 8.49632 6.75 7.875 6.75C7.25368 6.75 6.75 7.25368 6.75 7.875C6.75 8.49632 7.25368 9 7.875 9Z" fill="currentcolor"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2007_86368">
+            <rect width="24" height="24" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+
           <input placeholder="Máximo" />
         </div>
       </div>

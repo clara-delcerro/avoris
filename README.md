@@ -24,6 +24,10 @@ El proyecto está organizado en componentes independientes:
 - **CardsGridComponent**  
 - **TravelCardComponent**  
 - **FooterComponent**
+- **Hero**
+- **Price-modal**
+- **Filters-sidebar**
+- **Travel-card**
 
 La maquetación se ha realizado con enfoque **mobile-first**, aplicando breakpoints adaptados al diseño de Figma.
 

@@ -14,21 +14,21 @@
   margin-bottom: $sp-xxl;
 
   &__title {
-    font-size: 22px;
+    font-size: $sp-ml;
     font-weight: 700;
     margin-bottom: $sp-m;
     color: $text-primary;
   }
 
   &__grid {
-    @include grid(1, 24px);
+    @include grid(1, $sp-l);
 
     @include tablet {
-      @include grid(2fr);
+      @include grid(2, $sp-l);
     }
 
     @include tablet-lg {
-      @include grid(3);
+      @include grid(3, $sp-l);
     }
   }
 }

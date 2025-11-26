@@ -1,9 +1,9 @@
 <app-header></app-header>
 <!-- end of app-header -->
 
+<app-hero></app-hero>
+<!-- end of app-hero -->
 <main class="main">
-  <app-hero></app-hero>
-  <!-- end of app-hero -->
 
   <div class="main__wrapper">
     <section class="main__intro">
@@ -11,17 +11,18 @@
       <p class="main__intro-subtitle">
         Para los que les gusta explorar y conocer mundo sin complejos
       </p>
-    </section>
+    </section><!-- end of main__intro -->
+
     <section class="main__content">
       <app-filters-sidebar></app-filters-sidebar>
       <!-- end of app-filters-sidebar -->
       <app-cards-grid (openBreakdown)="onOpenBreakdown($event)"></app-cards-grid>
       <!-- end of app-cards-grid -->
-    </section>
+    </section><!-- end of main__content -->
   </div>
-  <!-- end of main__content -->
+  <!-- end of main__wrapper -->
+</main>
+<!-- end of main -->
 
   <app-footer></app-footer>
   <!-- end of footer -->
-</main>
-<!-- end of main -->

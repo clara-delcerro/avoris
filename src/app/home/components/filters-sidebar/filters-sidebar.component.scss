@@ -8,83 +8,201 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: $basic-050;
+  background: $secondary-050;
   transform: translateX(-100%);
   transition: transform 0.35s ease;
   z-index: 9999;
-  padding: $sp-l;
+  // padding: $sp-l;
   overflow-y: auto;
+
+  @include tablet {
+    position: absolute;
+    width: 360px;
+    transform: translateX(-100%);
+    border-radius: $sp-l;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  @include desktop {
+    position: static;
+    width: 100%;
+    height: auto;
+    transform: none;
+    padding: 0;
+    overflow: visible;
+    margin-top: 41.56px;
+  }
 
   &--open {
     transform: translateX(0);
+
+    @include tablet {
+      transform: translateX(0);
+    }
   }
 
   &__header {
     @include flex(row, space-between, center);
-    margin-bottom: $sp-l;
+    padding: $sp-m $sp-l;
+    border-bottom: 1px solid $basic-100;
+
+    @include desktop {
+      justify-content: center;
+    }
   }
 
   &__title {
-    font-size: 20px;
+    font-size: $sp-m + 2;
     font-weight: 700;
+    line-height: $sp-l;
+
+    @include tablet {
+      padding: $sp-s;
+    }
   }
 
-  &__close img {
-    width: 20px;
-    height: 20px;
+  &__close  {
+    padding: 0;
+    height: auto;
+
+    svg {
+      width: $sp-l;
+      height: $sp-l;
+    }
+
+    @include desktop {
+      display: none;
+    }
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    gap: $sp-xl;
+    @include flex (column, flex-start, flex-start, $sp-sm);
+    padding: $sp-sm $sp-l;
   }
 
-  /* SECCIONES */
-  &__section-toggle {
-    @include flex(row, space-between, center);
+  &__section {
     width: 100%;
-    background: transparent;
-    padding: 0;
-    border: none;
-    font-size: $sp-m;
-    font-weight: 600;
-    color: $text-primary;
+
+    &-toggle {
+      @include flex(row, space-between, center);
+      width: 100%;
+      background: transparent;
+      padding: 0;
+      border: none;
+      font-size: $sp-m;
+      font-weight: 600;
+      color: $text-primary;
+      padding: $sp-sm 0;
+
+      &__title {
+        @include flex(row, center, center, $sp-s);
+
+        span {
+          color: $text-primary;
+          font-weight: 600;
+          font-size: $sp-m;
+          line-height: $sp-ml - 2;
+        }
+      }
+
+      &.open {
+        .filters {
+          &__chevron {
+            transform: rotate(90deg);
+            color: $secondary-600;
+          }
+
+          &__section-toggle__title {
+            span, svg {
+              color: $secondary-600;
+            }
+          }
+        }
+      }
+    }
   }
 
   &__chevron {
-    width: $sp-m;
+    width: $sp-l;
     transition: transform .3s ease;
-
-    &.open {
-      transform: rotate(180deg);
-    }
+    color: $text-primary;
   }
 
   &__group {
-    display: flex;
-    flex-direction: column;
-    gap: $sp-sm;
+    @include flex (column, flex-start, flex-start, $sp-m);
+    padding: 0 $sp-m;
+
+    &--price {
+      padding: 0;
+    }
+  }
+  &__more {
     margin-top: $sp-sm;
+    padding: 0;
+    border: none;
+    background: none;
+    color: $primary-700;
+    font-size: $sp-m - 2;
+    line-height: $sp-ml - 2;
+    text-decoration: underline;
+    cursor: pointer;
+    align-self: flex-start;
   }
 
   &__checkbox {
-    @include flex(row, flex-start, center);
-    gap: $sp-sm;
+    @include flex(row, flex-start, center, $sp-s);
+    padding: 0;
+    width: 100%;
 
     input {
+      appearance: none;
+      -webkit-appearance: none;
       width: 18px;
       height: 18px;
+      border: 2px solid $primary-700;
+      border-radius: 4px;
+      background: white;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+
+
+      &:checked {
+        background: $secondary-400;
+        border-color: $primary-700;
+      }
+
+      &:checked::after {
+        content: '';
+        width: 10px;
+        height: 6px;
+        border-left: 2px solid $primary-700;
+        border-bottom: 2px solid $primary-700;
+        transform: rotate(-45deg);
+        margin-top: -3px;
+      }
+
+    }
+
+    span {
+      font-weight: 600;
+      font-size: $sp-m - 2;
+      line-height: $sp-ml - 2;
+    }
+
+    input:checked + span {
+      font-weight: 700;
     }
   }
 
-  /* Inputs precio */
   &__input {
-    @include flex(row, flex-start, center);
-    gap: $sp-sm;
-    padding: $sp-sm $sp-m;
+    @include flex(row, flex-start, center, $sp-s);
+    padding:  $sp-s$sp-sm;
     border: 1px solid $primary-700;
     border-radius: 30px;
+    background-color: $white;
 
     input {
       border: none;
@@ -92,11 +210,32 @@
       width: 100%;
       font-size: $sp-m - 2;
       outline: none;
+      font-weight: 500;
     }
+
+    svg {
+      width: $sp-xl - 2;
+      height: $sp-xl - 2;
+      color: $primary-700;
+    }
+  }
+
+  &__open-btn {
+    @include flex(row, flex-start, center);
+    gap: $sp-sm;
+    background: transparent;
+    border: 1px solid $primary-700;
+    border-radius: 30px;
+    padding: $sp-sm $sp-m;
+    font-size: $sp-m - 2;
 
     img {
       width: $sp-m;
       height: $sp-m;
+    }
+
+    @include desktop {
+      display: none;
     }
   }
 }
@@ -107,69 +246,38 @@
 
   .tooltip {
     position: absolute;
-    top: -38px;
-    left: 0;
-    transform: translateY(-8px);
+    bottom: calc(100% + 6px); // lo coloca justo encima del icono
+    left: 50%;
+    transform: translateX(-50%);
     background: $basic-000;
     padding: $sp-sm $sp-m;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+    box-shadow: $shadow-base-default;
     white-space: nowrap;
     opacity: 0;
     pointer-events: none;
-    transition: opacity .2s ease;
+    transition: opacity .15s ease;
+    z-index: 20;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid $basic-000;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,.12));
+    }
   }
+
 
   &:hover .tooltip {
     opacity: 1;
   }
 }
 
-/* BOTÓN ABRIR */
-.filters__open-btn {
-  @include flex(row, flex-start, center);
-  gap: $sp-sm;
-  background: transparent;
-  border: 1px solid $primary-700;
-  border-radius: 30px;
-  padding: $sp-sm $sp-m;
-  font-size: $sp-m - 2;
 
-  img {
-    width: $sp-m;
-    height: $sp-m;
-  }
-}
-
-/* TABLET */
-@include tablet {
-  .filters {
-    width: 360px;
-    transform: translateX(-360px);
-  }
-
-  .filters--open {
-    transform: translateX(0);
-  }
-}
-
-/* DESKTOP */
-@include desktop {
-  .filters {
-    position: static;
-    width: 100%;
-    height: auto;
-    transform: none;
-    background: transparent;
-    padding: 0;
-    overflow: visible;
-  }
-
-  .filters__open-btn {
-    display: none;
-  }
-
-  .filters__header {
-    display: none;
-  }
-}
